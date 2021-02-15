@@ -1,0 +1,101 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block contact %}active{% endblock %}
+
+{% block content %}
+
+     <!-- Breadcrumbs-->
+      <section class="breadcrumbs-custom bg-image" style="background-image: url({%  static  'Home/images/bandeaux-cd-1-1920x301.jpg'  %});">
+        <div class="shell">
+          <h1 class="breadcrumbs-custom__title">İletişim</h1>
+          <ul class="breadcrumbs-custom__path">
+            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+              {% if user.is_authenticated %}
+                <li class="active">Merhaba {{ user }}</li>
+              {% else %}
+                <li class="active">İletişim</li>
+              {% endif %}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Get in Touch-->
+      <section class="section section-md bg-white text-center">
+        <div class="shell">
+          <div class="range range-md-center">
+            <div class="cell-md-11 cell-lg-10">
+              <h2 class="text-bold">İletişim kurmak için</h2>
+              <p><span class="box-width-2">Faks, e-posta veya telefonla 7/24 ulaşılabilirsiniz. Hizmetlerim hakkında soru sormak için hızlı bir iletişim formu da kullanabilirsiniz.</span></p>
+              <div class="layout-columns">
+                <div class="layout-columns__main">
+                  <div class="layout-columns__main-inner">
+                    <!-- RD Mailform-->
+                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{%  static  'Home/bat/rd-mailform.php'  %}">
+                      <div class="form-wrap">
+                        <input class="form-input" id="contact-date" type="text" data-time-picker="date" name="date" data-constraints="@Required">
+                        <label class="form-label" for="contact-date">Tarih</label>
+                      </div>
+                      <div class="form-wrap">
+                        <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                        <label class="form-label" for="contact-name">İsim ve Soyisim</label>
+                      </div>
+                      <div class="form-wrap">
+                        <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                        <label class="form-label" for="contact-email">E-mail</label>
+                      </div>
+                      <div class="form-wrap">
+                        <label class="form-label" for="contact-message">Mesajınız</label>
+                        <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                      </div>
+                      <div class="form-wrap form-button offset-1">
+                        <button class="button button-block button-primary-outline button-ujarak" type="submit">İletişime Geç</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="layout-columns__aside">
+                  <div class="layout-columns__aside-item">
+                    <p class="heading-5">Sosyal Medya</p>
+                    <div class="divider-modern"></div>
+                    <ul class="list-inline-xs">
+                      <li><a class="icon icon-md icon-gray-7 fa fa-facebook" href="https://www.facebook.com/elimirze.hesimzade.3"></a></li>
+                      <li><a class="icon icon-md icon-gray-7 fa fa-twitter" href="https://twitter.com/AlimirzaHashim1"></a></li>
+                      <li><a class="icon icon-md icon-gray-7 fa fa-instagram" href="https://www.instagram.com/"></a></li>
+                      <li><a class="icon icon-md icon-gray-7 fa fa-youtube" href="https://www.youtube.com/channel/UCAIdHMXKnDiZHDTzHLxn15Q/videos"></a></li>
+                    </ul>
+                  </div>
+                  <div class="layout-columns__aside-item">
+                    <p class="heading-5">Telefon</p>
+                    <div class="divider-modern"></div>
+                    <div class="unit unit-horizontal unit-spacing-xxs">
+                      <div class="unit__left"><span class="icon icon-md icon-primary material-icons-local_phone"></span></div>
+                      <div class="unit__body"><a href="tel:#">+90 (530) 863-32-68</a></div>
+                    </div>
+                  </div>
+                  <div class="layout-columns__aside-item">
+                    <p class="heading-5">Adres</p>
+                    <div class="divider-modern"></div>
+                    <div class="unit unit-horizontal unit-spacing-xxs">
+                      <div class="unit__left"><span class="icon icon-md icon-primary material-icons-location_on"></span></div>
+                      <div class="unit__body"><a href="#">En Rahat Koltuğunuz</a></div>
+                    </div>
+                  </div>
+                  <div class="layout-columns__aside-item">
+                    <p class="heading-5">Açılış saatleri</p>
+                    <div class="divider-modern"></div>
+                    <div class="unit unit-horizontal unit-spacing-xxs">
+                      <div class="unit__left"><span class="icon icon-md icon-primary mdi mdi-clock"></span></div>
+                      <div class="unit__body"><span>Okumanın Saati olmaz</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>{{ my_user.firstname }} {{ my_user.lastname }} </h1></div>
+    	<div class="col-sm-2"><a href="{% url 'home' %}" class="pull-right"><img title="Ana Sayfa" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+
+
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"><!--http://ssl.gstatic.com/accounts/ui/avatar_2x.png-->
+        <!--<h6>Farklı bir fotoğraf yükleyin...</h6>
+          {{ profil_form.profilPhoto }}-->
+      </div>
+            </hr><br>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><a href="http://bootnipets.com">virtualibrary.com</a></div>
+          </div>
+
+
+          <ul class="list-group">
+            <li class="list-group-item text-muted">Aktiviteler <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-right" title="Kütüphanemizde Mecvut Toplam Kitap Sayısı"><span class="pull-left"><strong>Mevcut Kitap Sayısı</strong></span> {{ books }}</li>
+            <li class="list-group-item text-right" title="Okuduğunuz Toplam Kitap Sayısı"><span class="pull-left"><strong>Okuduğunuz Kitap Sayısı</strong></span> {{ reading_book_count }}</li>
+            <li class="list-group-item text-right" title="Okumanızı Bekleyen Kitap Sayısı"><span class="pull-left"><strong>Kalan Kitap Sayısı</strong></span> {{ remaining_books }}</li>
+            <li class="list-group-item text-right" title="Okuduğunuz Kitabın Bitmesine Kalan Tahmini Süre"><span class="pull-left"><strong>Kalan Süre</strong></span> {{ remaining_time }} Gün</li>
+          </ul>
+
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Şifre</a></li>
+                <li><a data-toggle="tab" href="#messages">Profil</a></li>
+                <li><a data-toggle="tab" href="#settings">Kitaplar</a></li>
+              </ul>
+
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <hr>
+                  <form class="form" action="##" method="POST" id="password_form">
+                      {% csrf_token %}
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="password"><h4>Eski Şifre</h4></label><br>
+                              {{ password_form.old_password }}<br>
+                              <!--<input type="password" class="form-control" name="password" id="password" placeholder="Şifre" title="Eski Şifrenizi Girin.">-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="new_password"><h4>Yeni Şifre</h4></label><br>
+                              {{ password_form.new_password1 }}<br>
+                              <!--<input type="password" class="form-control" name="new_password" id="new_password" placeholder="Yeni Şifre" title="Yeni Şifrenizi Girin.">-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                            <label for="new_password2"><h4>Yeni Şifre Tekrar</h4></label><br>
+                              {{ password_form.new_password2 }}<br>
+                              <!--<input type="password" class="form-control" name="new_password2" id="new_password2" placeholder="Yeni Şifre" title="Yeni Şifrenizi Tekrar Girin.">-->
+                          </div>
+                      </div>
+                       <div class="form-group">
+
+                          <div class="col-xs-6">
+                              {% for message in messages %}
+                                  <label for="new_password2"><p>{{ password_form.errors }}</p></label><br>
+                                  <label for="new_password2"><h1>{{ message }}</h1></label><br>
+                            {% endfor %}
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success" type="submit" name="password_save" value="sifre_kaydet"><i class="glyphicon glyphicon-ok-sign"></i> Kaydet</button>
+                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Sıfırla</button>
+                            </div>
+                      </div>
+              	</form>
+
+              <hr>
+
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="messages">
+
+               <h2></h2>
+
+               <hr>
+                  <form class="form" action="##" method="POST" id="profil_form">
+                      {% csrf_token %}
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>Ad</h4></label>
+                              {{ profil_form.firstname }}<br>
+                              <!--<input type="text" class="form-control" name="first_name" id="first_name" placeholder="Ad" title="Adınızı Girin"><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Soyad</h4></label>
+                              {{ profil_form.lastname }}<br>
+                              <!--<input type="text" class="form-control" name="last_name" id="last_name" placeholder="Soyad" title="Soyadınızı Girin"><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              {{ user_form.email }}<br>
+                              <!--<input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="Email Adresinizi Girin"><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="dateOfBirth"><h4>Doğum Tarihi</h4></label>
+                              {{ profil_form.dateOfBirth }}<br>
+                              <!--<input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="Doğum Tarihi" title="Doğum Tarihinizi Girin"><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Ev</h4></label>
+                              {{ profil_form.phone }}<br>
+                              <!--<input type="text" class="form-control" name="phone" id="phone" placeholder="Ev Telefonu Numarasını Girin" title="Eğer Varsa Ev Telefonu Numarasını Girin."><br>-->
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Mobil</h4></label>
+                              {{ profil_form.mobile }}<br>
+                              <!--<input type="text" class="form-control" name="mobile" id="mobile" placeholder="Cep Telefonu Numarasını Girin" title="Eğer Varsa Cep Telefonu Numarasını Girin."><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Yaş</h4></label>
+                              {{ profil_form.age }}<br>
+                              <!--<input type="text" class="form-control" name="age" id="age" placeholder="Yaşınızı Girin" title="Eğer Isterseniz Yaşınızı Girin."><br>-->
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Okuma Hızı</h4></label>
+                              {{ profil_form.speed }}<br>
+                              <!--<input type="text" class="form-control" name="speed" id="speed" placeholder="Günlük Okunan Sayfa Sayısı Girin" title="Bir Gün İçinde Okuduğunuz Sayfa Sayısını Giriniz."><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="placeOfBirth"><h4>Doğum Yeri</h4></label>
+                              {{ profil_form.placeOfBirth }}<br>
+                              <!--<textarea class="form-control" id="placeOfBirth" name="placeOfBirth" cols="40" rows="5" placeholder="Doğum Yeri" title="Doğum Yerinizi Girin"></textarea><br>-->
+                          </div>
+                      </div>
+                   <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="placeOfBirth"><h4>Dil Tercihi</h4></label>
+                              {{ profil_form.language }}<br>
+                              <!--<textarea class="form-control" id="placeOfBirth" name="placeOfBirth" cols="40" rows="5" placeholder="Doğum Yeri" title="Doğum Yerinizi Girin"></textarea><br>-->
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              {% for message in messages %}
+                                  <label for="new_password2"><h1>{{ message }}</h1></label><br>
+                            {% endfor %}
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success" type="submit" name="profil_save" value="profil_kaydet"><i class="glyphicon glyphicon-ok-sign"></i> Kaydet</button>
+                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Sıfırla</button>
+                            </div>
+                      </div>
+              	</form>
+
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="settings">
+                  <hr>
+                  <form class="form" action="##" method="POST" id="book_form">
+                      {% csrf_token %}
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="books"><h4>Okuduğunuz Kitaplar</h4></label><br><br>
+                              {{ book_form.books }}
+                          </div>
+                      </div>
+                      <div class="form-group">
+
+                          <div class="col-xs-6">
+                              <label for="placeOfBirth"><h4>Şuan Okuduğunuz Kitap</h4></label><br><br>
+                              {{ book_form.reading_book }}<br>
+                              <!--<textarea class="form-control" id="placeOfBirth" name="placeOfBirth" cols="40" rows="5" placeholder="Doğum Yeri" title="Doğum Yerinizi Girin"></textarea><br>-->
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success" type="submit" name="book_save" value="kitap_kaydet"><i class="glyphicon glyphicon-ok-sign"></i> Kaydet</button>
+
+                            </div>
+                      </div>
+              	</form>
+              </div>
+
+              </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+
+</body>
+</html>

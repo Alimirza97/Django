@@ -1,0 +1,101 @@
+ID,Adi,Yazar,Yayinevi,Kategori,Dil
+1,Aklından Bir Sayı Tut,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe
+25,Altıncı Koğuş,Anton Pavloviç Çehov,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+32,Artemis,Andy Weir,İthaki Yayınları, Fantastik  Macera  Bilim Kurgu  ,Türkçe
+12,Ay Işığı Sokağı,Stefan Zweig,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+33,Açlık Oyunları 1,Suzanne Collins,Dex Kitap, Gerilim  Fantastik  Macera  ,Türkçe
+34,Açlık Oyunları 2: Ateşi Yakalamak,Suzanne Collins,Dex Kitap, Gerilim  Fantastik  Macera  ,Türkçe
+35,Açlık Oyunları 3: Alaycı Kuş,Suzanne Collins,Dex Kitap, Gerilim  Fantastik  Macera  ,Türkçe
+65,Ben Robot,Isaac Asimov,İthaki Yayınları, Macera  Bilim Kurgu  ,Türkçe
+91,Benjamin Button'un Tuhaf Hikayesi,Francis Scott Fitzgerald,İş Bankası Kültür Yayınları, Dram  Gerilim  ,Türkçe
+52,Beren İle Luthien,J.R.R. Tolkien,İthaki Yayınları, Fantastik  Macera  ,Türkçe
+29,Bir Kuzey Macerası,Jack London,İş Bankası Kültür Yayınları, Dram  Macera  ,Türkçe
+79,Bir Safdilin Hatıra Defteri,Arkadi Averçenko,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+83,Bir Yaz Gecesi Rüyası,William Shakespeare,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+37,Bir İdam Mahkumunun Son Günü,Victor Hugo,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+51,Bitmemiş Öyküler,J.R.R. Tolkien,İthaki Yayınları, Fantastik  Macera  ,Türkçe
+80,Budala,Fyodor Mihayloviç Dostoyevski,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+9,Delifişek,Jose Mauro De Vasconcelos,Can Yayınları, Dram  Otobiyografi  ,Türkçe
+50,Doğu Ekspresinde Cinayet,Agatha Christie,Altın Kitaplar, Polisiye  Macera  ,Türkçe
+41,Dr. Jekyll ile Bay Hyde: Tuhaf Bir Vaka,Robert Louis Stevenson,İş Bankası Kültür Yayınları, Polisiye  Dram  ,Türkçe
+60,Dune (1. Kitap),Frank Herbert,İthaki Yayınları, Gerilim  Fantastik  Macera  Bilim Kurgu  ,Türkçe
+61,Dune Mesihi (2. Kitap),Frank Herbert,İthaki Yayınları, Gerilim  Fantastik  Macera  Bilim Kurgu  ,Türkçe
+64,Dune Sapkınları (5. Kitap),Frank Herbert,İthaki Yayınları, Gerilim  Fantastik  Macera  Bilim Kurgu  ,Türkçe
+63,Dune Tanrı İmparatoru (4. Kitap),Frank Herbert,İthaki Yayınları, Gerilim  Fantastik  Macera  Bilim Kurgu  ,Türkçe
+62,Dune Çocukları (3. Kitap),Frank Herbert,İthaki Yayınları, Gerilim  Fantastik  Macera  Bilim Kurgu  ,Türkçe
+59,Dört (4. Kitap),Veronica Roth,Artemis Yayınları, Fantastik  Macera  Bilim Kurgu  ,Türkçe
+73,Elveda ve Bütün O Balıklar İçin Teşekkürler,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+71,Evrenin Sonundaki Restoran,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+82,Fırtına,William Shakespeare,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+6,Fırtınada Yanacaksın,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe
+53,Gondolin'in Düşüşü,J.R.R. Tolkien,İthaki Yayınları, Fantastik  Macera  ,Türkçe
+96,Goriot Baba,Honore de Balzac,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+93,Gurur ve Önyargı,Jane Austen,İş Bankası Kültür Yayınları, Dram  Gerilim  Romantik  ,Türkçe
+68,Gökteki Çakıl Taşı: Galaktik İmparatorluk Serisi 3,Isaac Asimov,İthaki Yayınları, Macera  Bilim Kurgu  ,Türkçe
+2,Gözlerini Sımsıkı Kapat,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe
+8,Güneşi Uyandıralım,Jose Mauro De Vasconcelos,Can Yayınları, Dram  Otobiyografi  ,Türkçe
+69,Hamlet,William Shakespeare,Ren Kitap, Dram  Gerilim  ,Türkçe
+21,Harry Potter ve Ateş Kadehi,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+20,Harry Potter ve Azkaban Tutsağı,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+18,Harry Potter ve Felsefe Taşı,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+23,Harry Potter ve Melez Prens,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+19,Harry Potter ve Sırlar Odası,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+22,Harry Potter ve Zümrüdüanka Yoldaşlığı,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+24,Harry Potter ve Ölüm Yadigarları,J.K. Rowling,Yapı Kredi Yayınları, Fantastik  ,Türkçe
+72,Hayat Evren ve Her Şey,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+17,Hobbit,J.R.R. Tolkien,İthaki Yayınları, Fantastik  ,Türkçe
+54,Hurin'in Çocukları,J.R.R. Tolkien,İthaki Yayınları, Fantastik  Macera  ,Türkçe
+81,Kendi Hayatının Şiirini Yazanlar,Stefan Zweig,İş Bankası Kültür Yayınları, Dram  Felsefe  ,Türkçe
+47,Kendime Düşünceler,Marcus Aurelius,İş Bankası Kültür Yayınları, Dram  Felsefe  ,Türkçe
+86,Kreutzer Sonat,Lev Nikolayeviç Tolstoy,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+55,Kullervo'nun Hikayesi,J.R.R. Tolkien,İthaki Yayınları, Fantastik  Macera  ,Türkçe
+94,Kumarbaz,Fyodor Mihayloviç Dostoyevski,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+57,Kuralsız (2. Kitap),Veronica Roth,Artemis Yayınları, Fantastik  Macera  Bilim Kurgu  ,Türkçe
+5,Kurt Gölü,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe
+75,Kuşkucu Somon,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+88,Küçük Kadınlar,Louisa May Alcott,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+90,Küçük Prens,Antoine de Saint-Exupery,İş Bankası Kültür Yayınları, Dram  Macera  ,Türkçe
+48,Kırlangıç Çığlığı,Ahmet Ümit,Yapı Kredi Yayınları, Polisiye  Gerilim  ,Türkçe
+99,Kızıl Kahkaha,Leonid Andreyev,İş Bankası Kültür Yayınları, Dram  Gerilim  ,Türkçe
+43,Labirent: Alev Deneyleri (2. Kitap),James Dashner,Pegasus Yayınları, Gerilim  Fantastik  Macera  ,Türkçe
+44,Labirent: Son İsyan,James Dashner,Pegasus Yayınları, Gerilim  Fantastik  Macera  ,Türkçe
+46,Labirent: Virüs Kodu,James Dashner,Pegasus Yayınları, Gerilim  Fantastik  Macera  ,Türkçe
+45,Labirent: Ölüm Emri,James Dashner,Pegasus Yayınları, Gerilim  Fantastik  Macera  ,Türkçe
+42,Labirent: Ölümcül Kaçış (1. Kitap),James Dashner,Pegasus Yayınları, Gerilim  Fantastik  Macera  ,Türkçe
+87,Madame Bovary,Gustave Flaubert,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+31,Marslı,Andy Weir,İthaki Yayınları, Gerilim  Macera  Bilim Kurgu  ,Türkçe
+77,Martin Eden,Jack London,İş Bankası Kültür Yayınları, Dram  Otobiyografi  ,Türkçe
+76,Martı,Anton Çehov,İndigo Kitap, Dram  Romantik  ,Türkçe
+92,Muhteşem Gatsby,Francis Scott Fitzgerald,İş Bankası Kültür Yayınları, Dram  Macera  ,Türkçe
+38,Notre Dame'in Kamburu,Victor Hugo,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+97,Olalla,Robert Louis Stevenson,İş Bankası Kültür Yayınları, Dram  Gerilim  ,Türkçe
+70,Otostopçunun Galaksi Rehberi,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+27,Oz Büyücüsü,L. Frank Baum,İş Bankası Kültür Yayınları, Dram  Fantastik  ,Türkçe
+89,Peter Pan,James Matthew Barrie,İş Bankası Kültür Yayınları, Dram  Macera  ,Türkçe
+4,Peter Pan Ölmeli,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe
+11,Rahel Tanrı'yla Hesaplaşıyor,Stefan Zweig,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+84,Romeo ve Juliet,William Shakespeare,İş Bankası Kültür Yayınları, Dram  Gerilim  Romantik  ,Türkçe
+13,Sarı Odanın Esrarı,Gaston Leroux,İş Bankası Kültür Yayınları, Polisiye  Dram  Gerilim  ,Türkçe
+10,Satranç,Stefan Zweig,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+28,Seksen Günde Dünya Gezisi,Jules Verne,İş Bankası Kültür Yayınları, Dram  Macera  ,Türkçe
+30,Silmarillion,J.R.R. Tolkien,İthaki Yayınları, Fantastik  ,Türkçe
+100,Siyah Lale,Alexandre Dumas,İş Bankası Kültür Yayınları, Dram  Romantik  ,Türkçe
+40,Suç ve Ceza,Fyodor Mihayloviç Dostoyevski,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+66,Toz Gibi Yıldızlar: Galaktik İmparatorluk Serisi 1,Isaac Asimov,İthaki Yayınları, Macera  Bilim Kurgu  ,Türkçe
+56,Uyumsuz (1. Kitap),Veronica Roth,Artemis Yayınları, Fantastik  Macera  Bilim Kurgu  ,Türkçe
+67,Uzay Akımları: Galaktik İmparatorluk Serisi 2,Isaac Asimov,İthaki Yayınları, Macera  Bilim Kurgu  ,Türkçe
+49,Yabancı,Stephen King,Altın Kitaplar, Polisiye  Gerilim  ,Türkçe
+58,Yandaş (3. Kitap),Veronica Roth,Artemis Yayınları, Fantastik  Macera  Bilim Kurgu  ,Türkçe
+39,Yeraltından Notlar,Fyodor Mihayloviç Dostoyevski,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+14,Yüzüklerin Efendisi1: Yüzük Kardeşliği,J.R.R. Tolkien,Metis Yayıncılık, Fantastik  ,Türkçe
+15,Yüzüklerin Efendisi2: İki Kule,J.R.R. Tolkien,Metis Yayıncılık, Fantastik  ,Türkçe
+16,Yüzüklerin Efendisi3: Kralın Dönüşü,J.R.R. Tolkien,Metis Yayıncılık, Fantastik  ,Türkçe
+98,Yıldız Gezgini,Jack London,İş Bankası Kültür Yayınları, Dram  Biyografi  ,Türkçe
+26,Zaman Makinesi,H.G. Wells,İş Bankası Kültür Yayınları, Dram  Gerilim  Fantastik  ,Türkçe
+74,Çoğunlukla Zararsız,Douglas Adams,Alfa Yayınları, Macera  Bilim Kurgu  ,Türkçe
+78,Ölüler Evinden Notlar,Fyodor Mihayloviç Dostoyevski,Can Yayınları, Dram  ,Türkçe
+85,Üç Ölüm,Lev Nikolayeviç Tolstoy,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+95,İki Şehrin Hikayesi,Charles Dickens,İş Bankası Kültür Yayınları, Dram  Gerilim  Romantik  ,Türkçe
+36,İnsan Neyle Yaşar?,Lev Nikolayeviç Tolstoy,İş Bankası Kültür Yayınları, Dram  ,Türkçe
+7,Şeker Portakalı,Jose Mauro De Vasconcelos,Can Yayınları, Dram  Otobiyografi  ,Türkçe
+3,Şeytanı Uyandırma,John Verdon,Koridor Yayıncılık, Polisiye  ,Türkçe

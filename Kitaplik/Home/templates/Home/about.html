@@ -1,0 +1,134 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block about %}active{% endblock %}
+
+{% block content %}
+
+      <!-- Breadcrumbs-->
+      <section class="breadcrumbs-custom bg-image" style="background-image: url({%  static  'Home/images/bandeaux-cd-1-1920x301.jpg'  %});">
+        <div class="shell">
+          <h1 class="breadcrumbs-custom__title">Hakkımızda</h1>
+          <ul class="breadcrumbs-custom__path">
+            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li class="active">Hakkımızda</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About Me-->
+      <section class="section section-md bg-white">
+        <div class="shell">
+          <div class="range range-50 range-sm-center range-md-left">
+            <div class="cell-sm-6 cell-md-5">
+              <div class="thumb-bordered"><img src="{%  static  'Home/images/BookAgainstRain.jpg'  %}" alt="" width="437" height="435"/>
+              </div>
+            </div>
+            <div class="cell-sm-6 cell-md-7">
+              <div class="box-width-3 box-centered">
+                <article class="quote-big">
+                  <p class="q">Okuma alışkanlığı kazanırken aynı zamanda okuduklarını tüm dünyayla değerlendirmek isteyenlere,</p>
+                </article>
+                <div class="divider"></div>
+                <p class="text-spacing-05">Bu site, size kitap okumak için motivasyon sağlamak ve 
+                kendinize bu konuda hedefler belirlemeniz amacıyla kurulmuştur.
+                Kitabınızı seçin, sizin için belirlenen sürede okuyun ve aynı
+                kitabı okuyan kişilerle kitap hakkında değerlendirme yapma
+                fırsatı bulun. Okuduğunuz kitaplara göre size verilen önerilerle,
+                zevkinize uyacak pek çok kitaba daha erişim sağlayın.</p>
+                <div class="group-3-columns" data-lightgallery="group">
+                  <div class="column-item"><a class="thumb-light" href="{%  static  'Home/images/certificate-1-847x1200.jpg'  %}" data-lightgallery="item"><img src="{%  static  'Home/images/SekerPortakali.jpg'  %}" alt="" width="120" height="171"/>
+                      <div class="thumb-light__overlay"></div></a></div>
+                  <div class="column-item"><a class="thumb-light" href="{%  static  'Home/images/certificate-1-847x1200.jpg'  %}" data-lightgallery="item"><img src="{%  static  'Home/images/GunesiUyandiralim.jpg'  %}" alt="" width="120" height="171"/>
+                      <div class="thumb-light__overlay"></div></a></div>
+                  <div class="column-item"><a class="thumb-light" href="{%  static  'Home/images/certificate-1-847x1200.jpg'  %}" data-lightgallery="item"><img src="{%  static  'Home/images/Delifisek.jpg'  %}" alt="" width="120" height="171"/>
+                      <div class="thumb-light__overlay"></div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Best Photos-->
+      <section class="section section-sm bg-gray-lighter text-center">
+        <div class="shell">
+          <div class="range range-50 range-sm-center">
+            <div class="cell-md-10 cell-lg-9">
+              <h1>En Son Eklenenler</h1>
+            </div>
+          </div>
+        </div>
+        <!-- Owl Carousel-->
+        <div class="owl-carousel-wrap owl-carousel_style-2">
+          <div class="owl-carousel" data-items="1" data-autoplay="true" data-lg-items="3" data-dots="false" data-nav="true" data-stage-padding="0" data-xs-stage-padding="90" data-sm-stage-padding="140" data-md-stage-padding="260" data-lg-stage-padding="1" data-loop="true" data-margin="0" data-mouse-drag="false" data-nav-custom="#owl-carousel-nav" data-center-mode="true" data-speed="500" data-lightgallery="group">
+
+              {% for book in books %}
+              <a class="thumb-ruby thumb-mixed_large" href="{%  static  'Home/images/'  %}{{book.coverPhoto}}" data-lightgallery="item"><img class="thumb-ruby__image" src="{%  static  'Home/images/'  %}{{book.coverPhoto}}" alt=""/>
+              <div class="thumb-ruby__caption">
+                <p class="thumb-ruby__title heading-3">{{ book.name }}</p>
+                <p class="thumb-ruby__text">{{ book.author }}<br>{{ book.publisher }}</p>
+              </div></a>
+              {% endfor %}
+
+          </div>
+          <div class="owl-outer-navigation" id="owl-carousel-nav">
+            <button class="owl-arrow owl-arrow-prev">
+              <svg x="0px" y="0px" viewbox="0 0 28.5 16" width="26" height="14">
+                <line x1="27.5" y1="8" x2="1" y2="8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></line>
+                <polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="8.8,15 1,8 8.8,1"></polyline>
+              </svg>
+            </button>
+            <button class="owl-arrow owl-arrow-next">
+              <svg x="0px" y="0px" viewbox="0 0 28.5 16" width="26" height="14">
+                <line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="8" x2="27.5" y2="8"></line>
+                <polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="19.7,15 27.5,8 19.7,1"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-md bg-white">
+           <div class="shell">
+             <div class="range range-50 range-sm-center range-md-left range-md-reverse range-md-middle">
+               <div class="cell-sm-10 cell-md-6 wow fadeInRight">
+                 <div class="box-width-4 box-centered">
+                   <p class="heading-1">Okumaya <br> Hemen Başla</p>
+                   </div>
+               </div>
+               <div class="cell-sm-10 cell-md-6 wow fadeInLeft">
+                 <article class="box-line"><span></span><span></span><span></span><span></span>
+                   <div class="box-line__main">
+                     <!-- RD Mailform-->
+                     <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{%  static  'Home/bat/rd-mailform.php'  %}">
+                       <div class="form-wrap">
+                         <input class="form-input" id="contact-date" type="text" data-time-picker="date" name="date" data-constraints="@Required">
+                         <label class="form-label" for="contact-date">Tarih</label>
+                       </div>
+                       <div class="form-wrap">
+                         <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                         <label class="form-label" for="contact-name">Adınız</label>
+                       </div>
+                       <div class="form-wrap">
+                         <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                         <label class="form-label" for="contact-email">E-mail</label>
+                       </div>
+                       <div class="form-wrap">
+                         <label class="form-label" for="contact-message">Mesajınız</label>
+                         <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                       </div>
+                       <div class="form-wrap form-button offset-1">
+                         <button class="button button-block button-primary-outline button-ujarak" type="submit">iletişime geç</button>
+                       </div>
+                     </form>
+                   </div>
+                 </article>
+               </div>
+             </div>
+           </div>
+      </section>
+{% endblock %}

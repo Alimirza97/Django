@@ -1,0 +1,77 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block my_page %}active{% endblock %}
+
+{% block content %}
+
+    {% if not books %}
+        {% for i in '012345678'|make_list %}
+            <br>
+        {% endfor %}
+        <p class="heading-1" style="text-align: center">Maalesef Size Uygun Bir Kitap Bulamadık :(</p>
+        {% for i in '0123456789'|make_list %}
+            <br>
+        {% endfor %}
+    {% else %}
+        <br><br>
+        <p class="heading-1" style="text-align: center">Seveceğinizi Düşündüğümüz Kitaplar</p>
+    {% endif %}
+    {% for book in books %}
+        {% if forloop.counter|divisibleby:2 %}
+            <!-- Image Left-->
+              <section class="section section-md bg-white">
+                <div class="shell">
+                  <div class="range">
+                    <div class="cell-md-10 cell-lg-8">
+                      <h2>{{ book.name }}</h2>
+                      <p><img src="{%  static  'Home/images/'  %}{{book.coverPhoto}}" alt="" width="350" height="499"/><p>Yazar: {{ book.author }}</p><p>Sayfa Sayisi: {{ book.pageCount }}</p><p>Puan: {{ book.point }}</p><p>Açıklama: {{ book.description }}</p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        {% else %}
+          <!-- Image Right-->
+          <section class="section section-md bg-white">
+            <div class="shell">
+              <div class="range">
+                <div class="cell-md-10 cell-lg-8">
+                  <h2 style="text-align: right">{{ book.name }}</h2>
+                  <p><img class="img-right" src="{%  static  'Home/images/'  %}{{book.coverPhoto}}" alt="" width="350" height="499"/><p>Yazar: {{ book.author }}</p><p>Sayfa Sayisi: {{ book.pageCount }}</p><p>Puan: {{ book.point }}</p><p>Açıklama: {{ book.description }}</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        {% endif %}
+    {% endfor %}
+
+
+    {% if books %}
+        <nav aria-label="Page navigation example" style="text-align: center">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+                {% if books.has_previous %}
+                    <a class="page-link" href="?page=1">&laquo; İlk Sayfa</a>
+                    <a class="page-link" href="?page={{ books.previous_page_number }}">Önceki</a>
+                {% endif %}
+            </li>
+            <li class="page-item">
+                <span>{{ books.paginator.num_pages }} &nbsp; Sayfadan &nbsp; {{ books.number }}.</span>
+            </li>
+            <li class="page-item">
+                {% if books.has_next %}
+                    <a class="page-link" href="?page={{ books.next_page_number }}">Sonraki</a>
+                     <a class="page-link" href="?page={{ books.paginator.num_pages }}">Son Sayfa &raquo;</a>
+                {% endif %}
+            </li>
+          </ul>
+        </nav>
+    {% endif %}
+
+
+{% endblock %}

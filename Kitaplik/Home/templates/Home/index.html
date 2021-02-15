@@ -1,0 +1,259 @@
+{% extends 'Home/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block home %}active{% endblock %}
+
+{% block content %}
+ <!-- My Best Photos-->
+    {% if request.user.is_authenticated %}
+        {% if books and my_user.books.all%}
+            <p class="heading-1" style="text-align: center">Okuduğunuz Kitaplar</p>
+        {% else %}
+            <p class="heading-1" style="text-align: center">En Yeni Kitaplarımız</p>
+        {% endif %}
+    {% else %}
+        <p class="heading-1" style="text-align: center">En Yeni Kitaplarımız</p>
+    {% endif %}
+    <section class="section bg-white text-center">
+        <!-- Slick Carousel-->
+        <div class="slick-wrap">
+          <div class="slick-slider slick-style-1" data-arrows="true" data-autoplay="false" data-loop="true" data-dots="true" data-swipe="true" data-xs-swipe="true" data-sm-swipe="false" data-items="1" data-sm-items="3" data-md-items="3" data-lg-items="3" data-center-mode="true" data-lightgallery="group-slick">
+              {% for book in books %}
+                <div class="item">
+                  <div class="slick-slide-inner">
+                    <div class="slick-slide-caption">
+                        <a class="thumb-ann thumb-mixed_large" href="{%  static  'Home/images/'  %}{{book.coverPhoto}}" data-lightgallery="item">
+                            <img class="thumb-ann__image" src="{%  static  'Home/images/'  %}background.jpg" alt="" width="961" height="664"/>
+                            <div class="thumb-ann__caption">
+                              <p class="thumb-ann__title heading-3">{{ book.name }}</p>
+                              <p class="thumb-ann__text">Yazar {{ book.author }}</p>
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+          </div>
+        </div>
+    </section>
+
+
+      <section class="section section-md bg-white text-center">
+        <div class="shell-fluid">
+          <p class="heading-1">En Populer Kitaplar</p>
+          <div class="isotope thumb-ruby-wrap wow fadeIn" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"><a class="thumb-ruby thumb-mixed_height-3 thumb-mixed_md" href="{%  static  'Home/images/'  %}{{ best_books.0.coverPhoto}}" data-lightgallery="item"><img class="thumb-ruby__image" src="{%  static  'Home/images/'  %}{{ best_books.0.coverPhoto}}" alt="" width="444" height="683"/>
+                        <div class="thumb-ruby__caption">
+                          <p class="thumb-ruby__title heading-3">{{ best_books.0.name}}</p>
+                          <p class="thumb-ruby__text">Yazar {{ best_books.0.author }}
+                            <!-- Portfolio-->
+                          </p>
+                        </div></a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"><a class="thumb-ruby thumb-mixed_height-3 thumb-mixed_md" href="{%  static  'Home/images/'  %}{{ best_books.1.coverPhoto}}" data-lightgallery="item"><img class="thumb-ruby__image" src="{%  static  'Home/images/'  %}{{ best_books.1.coverPhoto}}" alt="" width="444" height="683"/>
+                        <div class="thumb-ruby__caption">
+                          <p class="thumb-ruby__title heading-3">{{ best_books.1.name}}</p>
+                          <p class="thumb-ruby__text">Yazar {{ best_books.1.author }}
+                            <!-- Portfolio-->
+                          </p>
+                        </div></a>
+              </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"><a class="thumb-ruby thumb-mixed_height-3 thumb-mixed_md" href="{%  static  'Home/images/'  %}{{ best_books.2.coverPhoto}}" data-lightgallery="item"><img class="thumb-ruby__image" src="{%  static  'Home/images/'  %}{{ best_books.2.coverPhoto}}" alt="" width="444" height="683"/>
+                        <div class="thumb-ruby__caption">
+                          <p class="thumb-ruby__title heading-3">{{ best_books.2.name}}</p>
+                          <p class="thumb-ruby__text">Yazar {{ best_books.2.author }}
+                            <!-- Portfolio-->
+                          </p>
+                        </div></a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item"><a class="thumb-ruby thumb-mixed_height-3 thumb-mixed_md" href="{%  static  'Home/images/'  %}{{ best_books.3.coverPhoto}}" data-lightgallery="item"><img class="thumb-ruby__image" src="{%  static  'Home/images/'  %}{{ best_books.3.coverPhoto}}" alt="" width="444" height="683"/>
+                        <div class="thumb-ruby__caption">
+                          <p class="thumb-ruby__title heading-3">{{ best_books.3.name}}</p>
+                          <p class="thumb-ruby__text">Yazar {{ best_books.3.author }}
+                            <!-- Portfolio-->
+                          </p>
+                        </div></a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards-->
+            <section class="section parallax-container bg-image-dark" data-parallax-img="{%  static  'Home/images/GettyImages-577674005.jpg'  %}"><!--bg-image-7-1920x1244.jpg-->
+              <div class="parallax-content">
+                <div class="section-md text-center">
+                  <div class="shell">
+                    <div class="range range-50 range-lg-bottom">
+                      <div class="cell-xs-6 cell-md-3 wow fadeIn">
+                        <!-- Box award-->
+                        <article class="box-award"><img class="box-award__image" src="{%  static  'Home/images/Max-R_Headshot (1).jpg'  %}" alt="" width="134" height="98"/><!--award-1-134x98-inverse.png-->
+                          <h3 class="box-award__title">Aktiv Kullanıcı Sayısı</h3>
+                          <div class="box-award__divider"></div>
+                          <time class="box-award__time" datetime="2010">{{ users }}</time>
+                        </article>
+                      </div>
+                      <div class="cell-xs-6 cell-md-3 wow fadeIn" data-wow-delay=".1s">
+                        <!-- Box award-->
+                        <article class="box-award"><img class="box-award__image" src="{%  static  'Home/images/20191219170611-GettyImages-1152794789.jpeg'  %}" alt="" width="115" height="117"/><!--award-2-115x117-inverse.png-->
+                          <h3 class="box-award__title">Kitap Sayısı</h3>
+                          <div class="box-award__divider"></div>
+                          <time class="box-award__time" datetime="2014">{{ all_books }}</time>
+                        </article>
+                      </div>
+                      <div class="cell-xs-6 cell-md-3 wow fadeIn" data-wow-delay=".2s">
+                        <!-- Box award-->
+                        <article class="box-award"><img class="box-award__image" src="{%  static  'Home/images/publishers.png'  %}" alt="" width="116" height="103"/><!--award-3-116x103-inverse.png-->
+                          <h3 class="box-award__title">Yayınevi Sayısı</h3>
+                          <div class="box-award__divider"></div>
+                          <time class="box-award__time" datetime="2015">{{ publishers }}</time>
+                        </article>
+                      </div>
+                      <div class="cell-xs-6 cell-md-3 wow fadeIn" data-wow-delay=".3s">
+                        <!-- Box award-->
+                        <article class="box-award"><img class="box-award__image" src="{%  static  'Home/images/Fyodor-Dostoyevsky-1876.jpg'  %}" alt="" width="131" height="96"/><!--award-4-131x96-inverse.png-->
+                          <h3 class="box-award__title">Yazar Sayısı</h3>
+                          <div class="box-award__divider"></div>
+                          <time class="box-award__time" datetime="2016">{{ author }}</time>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+      <!-- Blog-->
+      <section class="section section-md bg-gray-lighter text-center">
+        <div class="shell">
+          <p class="heading-1">Alıntılar</p>
+          <div class="range range-30">
+            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall">
+              <!-- Post boxed-->
+              <article class="post-boxed">
+                <ul class="post-boxed__meta">
+                  <li>
+                    <time datetime="2019">Jul 20, 2019</time>
+                  </li>
+                  <li><a href="#">3 comments</a></li>
+                </ul>
+                <div class="post-boxed__main">
+                  <h3 class="post-boxed__title"><a href="#">Aklından Bir Sayı Tut</a></h3>
+                  <p>İnsanları öldüren silahlar değil, yine insanlardır.</p>
+                    <p>Hayatta, ölüm ve şüpheden başka kesin olan bir şey yoktur.</p>
+                    <p>Para için öldüren adamlar, ayakkabılarını ağaç dallarına asmaz, cesetlerin üzerine şiir bırakmazlar.</p>
+                </div>
+                <div class="post-boxed__aside">
+                  <div class="unit unit-horizontal unit-middle unit-spacing-xs">
+                    <div class="unit__left"><img class="post-boxed__avatar" src="{%  static  'Home/images/user-6-46x46.jpg'  %}" alt="" width="46" height="46"/>
+                    </div>
+                    <div class="unit__body">
+                      <h6 class="text-uppercase">by John Verdon</h6>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
+              <!-- Post boxed-->
+              <article class="post-boxed">
+                <ul class="post-boxed__meta">
+                  <li>
+                    <time datetime="2019">Jul 15, 2019</time>
+                  </li>
+                  <li><a href="#">3 comments</a></li>
+                </ul>
+                <div class="post-boxed__main">
+                  <h3 class="post-boxed__title"><a href="#">Benjamin Button'un Tuhaf Hikayesi</a></h3>
+                  <p>Hayatlarımızı bazen yakaladığımız fırsatlar belirler. Bazen de kaçırdığımız.</p><br>
+                    <p>Neden evlendiğini bilen bir kadın görmek çok cesaretlendirici bir şey. Kadınların onda dokuzu günbatımını tasvir eden hareketli bir resme doğru yürüdüklerini sanıyorlar..</p>
+                </div>
+                <div class="post-boxed__aside">
+                  <div class="unit unit-horizontal unit-middle unit-spacing-xs">
+                    <div class="unit__left"><img class="post-boxed__avatar" src="{%  static  'Home/images/user-6-46x46.jpg'  %}" alt="" width="46" height="46"/>
+                    </div>
+                    <div class="unit__body">
+                      <h6 class="text-uppercase">by Francis Scott Fitzgerald</h6>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".3s">
+              <!-- Post boxed-->
+              <article class="post-boxed">
+                <ul class="post-boxed__meta">
+                  <li>
+                    <time datetime="2019">Jul 5, 2019</time>
+                  </li>
+                  <li><a href="#">3 comments</a></li>
+                </ul>
+                <div class="post-boxed__main">
+                  <h3 class="post-boxed__title"><a href="#">Kendi Hayatının Şiirini Yazanlar</a></h3>
+                  <p>Başkalarını çok fazla düşünen bir kimse, kendisini unutur.</p>
+                    <p>Ona nasıl ulaştığı,insanın ulaştığı mükemmel ahlaki seviyeden daha önemlidir.</p>
+                    <p>Kesin doğrular olarak yalnızca duygular vardır.</p>
+                </div>
+                <div class="post-boxed__aside">
+                  <div class="unit unit-horizontal unit-middle unit-spacing-xs">
+                    <div class="unit__left"><img class="post-boxed__avatar" src="{%  static  'Home/images/user-6-46x46.jpg'  %}" alt="" width="46" height="46"/>
+                    </div>
+                    <div class="unit__body">
+                      <h6 class="text-uppercase">by Stefan Zweig</h6>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Book Your Photo Shoot-->
+      <section class="section section-md bg-white">
+        <div class="shell">
+          <div class="range range-50 range-sm-center range-md-left range-md-reverse range-md-middle">
+            <div class="cell-sm-10 cell-md-6 wow fadeInRight">
+              <div class="box-width-4 box-centered">
+                <p class="heading-1">Okumaya <br> Hemen Başla</p>
+                </div>
+            </div>
+            <div class="cell-sm-10 cell-md-6 wow fadeInLeft">
+              <article class="box-line"><span></span><span></span><span></span><span></span>
+                <div class="box-line__main">
+                  <!-- RD Mailform-->
+                  <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{%  static  'Home/bat/rd-mailform.php'  %}">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-date" type="text" data-time-picker="date" name="date" data-constraints="@Required">
+                      <label class="form-label" for="contact-date">Tarih</label>
+                    </div>
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-name">Adınız</label>
+                    </div>
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                      <label class="form-label" for="contact-email">E-mail</label>
+                    </div>
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-message">Mesajınız</label>
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                    <div class="form-wrap form-button offset-1">
+                      <button class="button button-block button-primary-outline button-ujarak" type="submit">iletişime geç</button>
+                    </div>
+                  </form>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

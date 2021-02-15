@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
+    <link rel="stylesheet"  href="{%  static  'Home/css/bootstrap.css'  %}">
+    <link rel="stylesheet"  href="{%  static  'Home/css/style.css'  %}">
+  </head>
+  <body>
+    <!-- Page Loader-->
+    <div id="page-loader">
+      <div class="page-loader-body">
+        <div class="cssload-spinner">
+          <div class="cssload-cube cssload-cube0"></div>
+          <div class="cssload-cube cssload-cube1"></div>
+          <div class="cssload-cube cssload-cube2"></div>
+          <div class="cssload-cube cssload-cube3"></div>
+          <div class="cssload-cube cssload-cube4"></div>
+          <div class="cssload-cube cssload-cube5"></div>
+          <div class="cssload-cube cssload-cube6"></div>
+          <div class="cssload-cube cssload-cube7"></div>
+          <div class="cssload-cube cssload-cube8"></div>
+          <div class="cssload-cube cssload-cube9"></div>
+          <div class="cssload-cube cssload-cube10"></div>
+          <div class="cssload-cube cssload-cube11"></div>
+          <div class="cssload-cube cssload-cube12"></div>
+          <div class="cssload-cube cssload-cube13"></div>
+          <div class="cssload-cube cssload-cube14"></div>
+          <div class="cssload-cube cssload-cube15"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-->
+    <div class="page">
+        <!-- Page header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="5px" data-lg-stick-up-offset="5px" data-md-stick-up="true" data-lg-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="{% url 'home' %}">
+                      <div class="brand__name"><img class="brand__logo-dark img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100" alt="" width="243" height="57"/><img class="brand__logo-light img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100" alt="" width="243" height="57"/><!--İlki{%  static  'Home/images/'  %}logo-243x57.png  İkincisi {%  static  'Home/images/'  %}logo-inverse-243x57.png-->
+                      </div></a></div>
+                </div>
+                <!-- RD Navbar Nav-->
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-element">
+                    <ul class="list-icons list-inline-sm">
+                        {% if user.is_authenticated %}
+                            <!--<li  title="Çıkış Yap"><a class="icon icon-sm icon-style-camera" href="{% url 'logout' %}"><span></span><span></span>L<span></span><span></span></a></li>-->
+                            <li class="active"><a href="{% url 'logout' %}" title="Çıkış Yap">Çıkış Yap</a></li>
+                        {% else %}
+                            <!--<li  title="Giriş Yap"><a class="icon icon-sm icon-style-camera" href="{% url 'login' %}"><span></span><span></span>L<span></span><span></span></a></li>-->
+                            <li class="active"><a href="{% url 'login' %}" title="Giriş Yap">Giriş Yap</a></li>
+                        {% endif %}
+                      <!--<li title="Kayıt Ol"><a class="icon icon-sm icon-style-camera" href="{% url 'register' %}"><span></span><span></span>R<span></span><span></span></a></li>-->
+                      <li class="active"><a href="{% url 'register' %}" title="Kayıt Ol">Kayıt Ol</a></li>
+                      <!--<li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>-->
+                    </ul>
+                  </div>
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="{% block home %}{% endblock %}"><a href="{% url 'home' %}" title="Ana Sayfa">Ana Sayfa</a></li>
+                    <li class="{% block about %}{% endblock %}"><a href="{% url 'about' %}" title="Hakkımızda">Hakkımızda</a></li>
+                    <li class="{% block contentt %}{% endblock %}"><a href="{% url 'content' %}" title="İçerik">İçerik</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="{% block my_page %}{% endblock %}"><a href="{% url 'my_page' %}" title="Benim Sayfam">Benim Sayfam</a></li>
+                            <li class="{% block profil %}{% endblock %}"><a href="{% url 'profil' %}" title="Profil">Profil</a></li>
+                        {% else %}
+                            <li class="{% block contact %}{% endblock %}"><a href="{% url 'contact' %}" title="İletişim">İletişim</a></li>
+                        {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+     {% block content %}{% endblock %}
+
+      <!-- Page Footer-->
+    <footer class="footer-centered section bg-gray-darker">
+        <div class="shell">
+          <div class="range range-sm-center">
+            <div class="cell-sm-10 cell-md-8 cell-lg-6">
+                    <!-- RD Mailform-->
+                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="{%  static  'Home/bat/rd-mailform.php'  %}">
+                      <div class="form__inner">
+                        <div class="form-wrap">
+                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
+                          <label class="form-label" for="subscribe-form-footer-email">Senin E-mail Adresin...</label>
+                        </div>
+                        <div class="form-button">
+                          <button class="button button-link" type="submit">Abone Ol</button>
+                        </div>
+                      </div>
+                    </form>
+              <ul class="list-icons list-inline-sm">
+                <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li><a class="icon icon-sm fa fa-pinterest icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+              </ul>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="#">Zeynep Aldinç, Almirza Hashimzada</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="{%  static  'Home/js/core.min.js'  %}"></script>
+    <script src="{%  static  'Home/js/script.js'  %}"></script>
+    <!-- coded by starlight-->
+  </body>
+</html>
