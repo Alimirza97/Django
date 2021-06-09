@@ -1,1 +1,8 @@
-# Django
+# KİTAP TAKİP VE ÖNERİ SİSTEMİ
+Teknolojinin herkes için ulaşılabilir olduğu günümüzde teknolojiyle 
+aramızda bağ kuran tüm araçlar insanlar için vazgeçilemez olmaya başlamıştır.
+Sanal mağazalar, sosyal medya, iletişim araçları ve pek çok yayın aracının 
+elektronik ortamlar üzerinden faaliyet göstermesiyle gerçek hayata karşı
+olan bağ git gide zayıflamış ve bu da insanlar üzerinde çeşitli sağlık sorunlarını ve odaklanma problemlerini beraberinde getirmiştir. Bu sorunların önüne geçilmesi ve insanların yeniden gerçek hayatla bağ kurmalarının en etkili ve en eski yolu olan kitap okumanın yeniden motive edilmeye başlanması sadece toplumumuzun değil aynı zamanda tüm dünyanın geleceği açısından önem arz etmektedir
+#
+Bu projede odaklanma problemleri yaşayan, sanal dünyadan uzaklaşmak veya okuma hızını artırmak isteyen ya da sadece düzenli bir şekilde kitap okuma takibini gerçekleştirmeyi düşünen herkes için motive edici bir web sitesi oluşturulması hedeflenmiştir. Bunun için kullanıcının giriş yapabileceği web sitesinde görüntülenmek üzere, kitap bilgilerinden oluşan, bir veri tabanı oluşturularak kullanıcının okuduğu kitapları seçmesi sağlanmış ve okumak isteyebileceği kitaplar bulunarak kullanıcının önerisine sunulmuştur. Böylelikle kullanıcıya kitap seçmesi konusunda kolaylık sağlanmıştır. Kullanıcıdan alınan günlük ortalama okunan sayfa sayısına göre seçtiği kitabı okuması gereken süre kullanıcıya gösterilerek kitabı belirtilen sürede okuması için motive olması amaçlanmıştır. Hazırlanan projede kullanıcıların okumaya daha fazla zaman ayırarak sosyal medya vb. zaman ve sağlık açısından zarar teşkil eden uygulamalardan uzaklaşmalarını ve odaklarını yeniden kazanmaları sonucu elde etmek istenmektedir.
